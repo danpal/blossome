@@ -1,3 +1,48 @@
+@import mixins
 .header
+  margin: 25px 0
+  .right-menu
+    position: absolute
+    left: 85%
+    color: white
+    background-color: black
+    width: 60px
+    height: 35px
+    @include rounded(8px)
+    .icons
+      font-size: 16pt
+      padding-top: 13%
+      text-align: center
   .center
     text-align: center
+    padding-top: 1px
+  
+  #dropdown
+    display: none
+    right: 0
+    background-color: black
+    position: absolute
+    width: auto
+    border-radius: 5px
+    border-top-right-radius: 0
+    border-radius-topright: 0
+    
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+    li
+      border-bottom: 1px solid #363636
+      a
+        padding-left: 20px
+        padding-right: 15px
+        min-width: 140px
+        text-transform: uppercase
+        letter-spacing: 2px
+        color: #eee
+        font-weight: 600
+        border: none
+        font-size: 14px
+        display: block
+        padding-top: 15px
+        padding-bottom: 15px

@@ -1,4 +1,5 @@
-//= require 'normalize'
+//= require 'vendor/normalize'
+//= require 'vendor/font-awesome'
 //= require 'header'
 //= require 'blog'
 //= require 'post'
