@@ -1,0 +1,4 @@
+blog:
+  title: "Galleta Blog"
+  description: "A minimal blog engine for developers"
+  keywords: "Ruby, blog, sinatra, haml, sass"
