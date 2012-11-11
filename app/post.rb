@@ -3,7 +3,7 @@ require 'rdiscount'
 
 module Galleta
   class Post
-    attr_accessor :title, :description, :keywords, :date, :markdown, :html_content, :time
+    attr_accessor :title, :description, :keywords, :date, :markdown, :html_content, :time, :url
           
 
     def initialize(name)
@@ -16,6 +16,7 @@ module Galleta
       @date = metadata["date"]
       @html_content = RDiscount.new(@markdown).to_html
       @time = date_to_time(@date) 
+      @url = name.end_with?(".md") ? name[0..-4] : name 
     end
 
 

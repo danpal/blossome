@@ -2,17 +2,23 @@
 
 -latest_post = @posts[0]
 .post
-  .separator
   .post-header
-    %h1= latest_post.title
+    %h1
+      %a{:href => url(latest_post.url)}= latest_post.title
     %p= latest_post.date
   = latest_post.html_content
-
-- @posts[1..-1].each do |post|
-  .post-overview
-    .separator
-    %h1=post.title
-    %p=post.date
-
 .separator
+
+
+.index
+  - @posts[1..-1].each do |post|
+    .post.expandable
+      .post-header
+        %h1
+          %a{:href => url(post.url)}= post.title
+        %p= post.date
+      .content{:style => "display:none"}
+        = post.html_content
+    .separator
+
 
