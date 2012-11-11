@@ -12,3 +12,4 @@ end
 map "/" do
   run Galleta::Blog
 end
+

@@ -9,8 +9,10 @@ gem 'haml'
 gem 'sass'
 gem 'coffee-script'
 gem 'sprockets', '~> 2.0'
+gem 'rdiscount'
 
 group :development, :test do
+  gem 'shotgun'
   gem 'rspec'
   gem 'pry'
   gem 'rack-test'
