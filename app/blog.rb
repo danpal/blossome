@@ -2,7 +2,7 @@ require 'bundler'
 Bundler.require
 require 'sinatra/partial'
 require './app/config'
-
+require 'pry'
 module Galleta
   class Blog < Sinatra::Base
     register Sinatra::Partial    

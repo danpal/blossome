@@ -3,16 +3,16 @@
   %head
     %meta{:charset => "utf-8"}/
     %title= @title
-    %meta{:content => "#{@description}", :name => "description"}/
-    %meta{:content => "#{@keywords}", :name => "keywords"}/
+    %meta{:content => "#{@description}", :name => "description"}
+    %meta{:content => "#{@keywords}", :name => "keywords"}
     -# Facebook open graph tags
-    %meta{:content => "#{request.url}", :property => "og:url"}/
-    %meta{:content => "#{@title}", :property => "og:site_name"}/
-    %meta{:content => "website", :property => "og:type"}/
-    %meta{:content => "#{@title}", :property => "og:title"}/
-    %meta{:content => "hots/assets/facebook/facebook-og.png", :property => "og:image"}/
-    %meta{:content => "#{@description}", :property => "og:description"}/
-    %meta{:content => "width=device-width", :name => "viewport"}/
+    %meta{:content => "#{request.url}", :property => "og:url"}
+    %meta{:content => "#{@title}", :property => "og:site_name"}
+    %meta{:content => "website", :property => "og:type"}
+    %meta{:content => "#{@title}", :property => "og:title"}
+    %meta{:content => "#{request.host}/assets/logo.png", :property => "og:image"}
+    %meta{:content => "#{@description}", :property => "og:description"}
+    %meta{:content => "width=device-width", :name => "viewport"}
     %link(rel="shortcut icon" href="/assets/favicon.ico" type="image/png")
     %link{:href => "/assets/application.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}
   %body
