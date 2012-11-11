@@ -12,7 +12,7 @@ module Galleta
 
   set :partial_template_engine, :haml    
   set :environment, :develpment 
-
+  set :show_exceptions, :true
   @@config = Galleta::Config.new #loads ./config/config.yaml
 
 
@@ -23,6 +23,7 @@ module Galleta
     @description = @@config.description
     @keywords = @@config.keywords
     @title  = @@config.title
+    @posts = get_active_posts
     haml :index
   end
  
@@ -33,9 +34,26 @@ module Galleta
   get '/:post' do
     post = params[:post].gsub(/[^A-Za-z\-]/, "") #strip just in case
     @post = Post.new(post)
-    @post_content = RDiscount.new(@post.markdown).to_html
+    @description = @post.description
+    @keywords = @post.keywords
+    @title  = @post.title
     haml :post
   end
+  
+  private 
+    
+    def get_active_posts
+      posts = []
+      Dir.foreach("./posts") do |file| 
+        if file.end_with?(".md")
+          post = Post.new(file)
+          posts << post if post.time < Time.now 
+        end
+      end
+      #sort posts by date
+      posts.sort! {|x,y| y.time <=> x.time }
+      return posts
+    end
 
   end #class Application
 end

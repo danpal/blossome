@@ -1,2 +1,18 @@
-%h1
-  Hello
+-# -latest_posts.each do |post|
+
+-latest_post = @posts[0]
+.post
+  .separator
+  .post-header
+    %h1= latest_post.title
+    %p= latest_post.date
+  = latest_post.html_content
+
+- @posts[1..-1].each do |post|
+  .post-overview
+    .separator
+    %h1=post.title
+    %p=post.date
+
+.separator
+
