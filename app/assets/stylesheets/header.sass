@@ -3,6 +3,22 @@
 
 .header
   margin: 25px 0
+  .phones-menu
+    text-align: center
+    li
+      display: inline-block
+      list-style-type: none
+      margin: 0
+      padding: 0
+
+    a 
+      text-decoration: none
+      color: #666
+      &:visited
+        color: #666
+      &:hover
+        color: #222
+
   .right-menu
     position: absolute
     left: 85%
@@ -15,7 +31,7 @@
       font-size: 16pt
       padding-top: 13%
       text-align: center
-  
+   
   #dropdown
     display: none
     right: 0
@@ -55,7 +71,7 @@
 
     p
       color: #A5A5A5 
-      font-size: $h1-size - 20
+      font-size: $h1-size - 10
       margin-top: 3pt
       -webkit-font-smoothing: antialiased
 

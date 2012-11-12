@@ -1,0 +1,70 @@
+@import variables
+.phones-menu
+  display: none
+
+/* Form phone */ 
+@media (max-width: 760px)
+
+  .content-container
+    width: 90%
+  .phones-menu
+    display: block
+  .right-menu
+    display: none
+  
+  .post
+    .post-header
+      h1
+        font-size: $phone-title-size
+      p
+        font-size: $phone-title-size - 20pt
+    
+    h1
+      font-size: $phone-h1-size
+    h2
+      font-size: $phone-h1-size - 2pt
+    h3
+      font-size: $phone-h1-size - 4pt
+    h4
+      font-size: $phone-h1-size - 6pt
+    h5
+      font-size: $phone-h1-size - 8pt
+    h6
+      font-size: $phone-h1-size - 10pt
+
+
+    p
+      font-size: $phone-p-size
+
+    .image-right
+      float: none
+      margin: 0px
+      text-align: center
+      img 
+        width: 100%
+        height: 100%
+
+    .image
+      img 
+        width: 100%
+        height: 100%
+    .video
+      iframe
+        width: 210px
+        height: 130px 
+
+
+/* For desktop */
+    
+/* For general iPad layouts */
+@media (min-width: 768px) and (max-width: 1023px) 
+  
+  .video
+    iframe
+      width: 420px
+      height: 260px 
+
+
+/* For desktop */
+@media (min-width: 1024px) 
+  

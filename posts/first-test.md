@@ -29,10 +29,12 @@ Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex. "it's all in
 chapters 12--14"). Three dots ... will be converted to an ellipsis.
 
 
-
-An h2 header
-------------
-
+# An h1 header
+##An h2 header
+###An h3 header
+####An h4 header
+#####An h5 header
+###### An h6 header
 Here's a numbered list:
 
  1. first item
