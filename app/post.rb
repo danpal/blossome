@@ -3,7 +3,7 @@ require 'rdiscount'
 require './app/markdown_helpers'
 require 'mustache'
 
-module Galleta
+module Blossome
   class Post
     attr_accessor :title, :description, :keywords, :date, :markdown, :html_content, :time, :url
           

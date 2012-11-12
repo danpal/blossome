@@ -1,4 +1,4 @@
-module Galleta
+module Blossome
   class MarkdownHelpers < Mustache
 
   def vimeoVideo(video_id)

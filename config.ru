@@ -10,6 +10,6 @@ map "/assets" do
 end
 
 map "/" do
-  run Galleta::Blog
+  run Blossome::Blog
 end
 

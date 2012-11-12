@@ -1,5 +1,5 @@
 require 'yaml'
-module Galleta
+module Blossome
   class Config
     attr_accessor :title, :description, :keywords  
     def initialize

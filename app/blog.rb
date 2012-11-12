@@ -7,14 +7,14 @@ require 'rdiscount'
 require 'mustache'
 require 'pry'
 
-module Galleta
+module Blossome 
   class Blog < Sinatra::Base
     register Sinatra::Partial    
 
   set :partial_template_engine, :haml    
   set :environment, :develpment 
   set :show_exceptions, :true
-  @@config = Galleta::Config.new #loads ./config/config.yaml
+  @@config = Blossome::Config.new #loads ./config/config.yaml
 
 
   ##

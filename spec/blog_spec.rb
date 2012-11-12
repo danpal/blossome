@@ -1,9 +1,9 @@
 require './spec/spec_helper'
 
-describe 'Galleta Blog' do
+describe 'Blossome Blog' do
 
   def app 
-    Galleta::Blog
+    Blossome::Blog
   end
   
   it "Welcomes the on the root" do
