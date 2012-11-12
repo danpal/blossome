@@ -10,6 +10,8 @@ gem 'sass'
 gem 'coffee-script'
 gem 'sprockets', '~> 2.0'
 gem 'rdiscount'
+gem 'mustache'
+
 
 group :development, :test do
   gem 'shotgun'

@@ -1,5 +1,7 @@
 require 'yaml'
 require 'rdiscount'
+require './app/markdown_helpers'
+require 'mustache'
 
 module Galleta
   class Post
@@ -14,6 +16,7 @@ module Galleta
       @description = metadata["description"]
       @keywords = metadata["keywords"]
       @date = metadata["date"]
+      @markdown =  MarkdownHelpers.render(@markdown) #Go through mustache first
       @html_content = RDiscount.new(@markdown).to_html
       @time = date_to_time(@date) 
       @url = name.end_with?(".md") ? name[0..-4] : name 

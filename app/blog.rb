@@ -4,6 +4,7 @@ require 'sinatra/partial'
 require './app/config'
 require './app/post'
 require 'rdiscount'
+require 'mustache'
 require 'pry'
 
 module Galleta
