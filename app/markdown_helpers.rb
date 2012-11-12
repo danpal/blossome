@@ -22,9 +22,6 @@ module Galleta
     html += '</div>'
     return html
   end
-  
- 
-  
 
   end
 end
