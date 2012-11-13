@@ -31,13 +31,16 @@ rules:
 2. Filenames have to end with .md
 
 3. At the top include a description in between "-----" Eg:
+  
 
-    -----------------------
-    title: "Title of the post"
-    description: "this goes on the SEO description"
-    keywords: "some, SEO, keywords"
-    date: October 31, 2012
-    -----------------------
+<pre><code>
+  -----------------------
+  title: "Title of the post"
+  description: "this goes on the SEO description"
+  keywords: "some, SEO, keywords"
+  date: October 31, 2012
+  -----------------------
+</code></pre>
 
 4. Date format is Month day, year. Full name on months.
 
