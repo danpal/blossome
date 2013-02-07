@@ -1,7 +1,7 @@
 require 'yaml'
 module Blossome
   class Config
-    attr_accessor :title, :description, :keywords  
+    attr_accessor :title, :description, :keywords
     def initialize
       config = YAML.load_file('./config/config.yml')
       @title = config["blog"]["title"]
