@@ -9,12 +9,12 @@ require 'pry'
 
 module Blossome 
   class Blog < Sinatra::Base
-    register Sinatra::Partial    
+    register Sinatra::Partial
 
-  set :partial_template_engine, :haml    
-  set :environment, :develpment 
-  set :show_exceptions, :true
   @@config = Blossome::Config.new #loads ./config/config.yaml
+    set :partial_template_engine, :haml
+    set :environment, ENV["RACK_ENV"] || "test"
+    set :show_exceptions, ENV["RACK_ENV"] == "development"
 
 
   ##
