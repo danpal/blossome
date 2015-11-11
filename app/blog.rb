@@ -38,6 +38,9 @@ module Blossome
     @description = @post.description
     @keywords = @post.keywords
     @title  = @post.title
+    if @post.redirect
+      redirect @post.redirect, 301
+    end
     haml :post
   end
   
