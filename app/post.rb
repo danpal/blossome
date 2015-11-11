@@ -5,8 +5,8 @@ require 'mustache'
 
 module Blossome
   class Post
-    attr_accessor :title, :description, :keywords, :date, :markdown, :html_content, :time, :url
           
+    attr_accessor :title, :description, :keywords, :date, :markdown, :html_content, :time, :url, :redirect
 
     def initialize(name)
       yaml, @markdown = Post.split(name)
@@ -16,6 +16,7 @@ module Blossome
       @description = metadata["description"]
       @keywords = metadata["keywords"]
       @date = metadata["date"]
+      @redirect = metadata["redirect"]
       @markdown =  MarkdownHelpers.render(@markdown) #Go through mustache first
       @html_content = RDiscount.new(@markdown).to_html
       @time = date_to_time(@date) 
